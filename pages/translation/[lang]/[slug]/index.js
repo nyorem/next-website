@@ -46,7 +46,7 @@ const Translation = ({ source, meta }) => {
 export const getStaticProps = async context => {
     const { lang, slug } = context.params
 
-    const source = await import(`../../../content/translations/${slug}-${lang}.md`)
+    const source = await import(`../../../../content/translations/${slug}-${lang}.md`)
     const { content, data } = matter(source.default)
 
     return {
@@ -57,6 +57,7 @@ export const getStaticProps = async context => {
     }
 }
 
+// TODO: move to utils
 const isDirectory = path => fs.existsSync(path) && fs.lstatSync(path).isDirectory()
 
 export const getStaticPaths = () => {
