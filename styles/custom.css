@@ -1,0 +1,44 @@
+.pagination li {
+    margin: 2px;
+}
+
+.draft {
+    color: red;
+}
+
+#header_novel {
+    display: flex;
+}
+
+#header_novel #title {
+    flex: 1;
+}
+
+#header_novel #lang {
+    flex: 0 1 50px;
+}
+
+#header_novel #lang img {
+    float: right;
+}
+
+.translation_jp {
+    font-size: 1.2em;
+}
+
+#chapter center a {
+    margin: 1.1em;
+}
+
+figure {
+    padding: 5px;
+    margin: auto;
+    text-align: center;
+}
+
+figcaption {
+    border: thin #c0c0c0 solid;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
