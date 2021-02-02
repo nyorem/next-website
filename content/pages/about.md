@@ -1,3 +1,7 @@
+---
+title: About Me
+---
+
 # About me
 
 I graduated from the [Ensimag](http://ensimag.grenoble-inp.fr/welcome/) (engineering school in applied mathematics and computer science) in 2015.

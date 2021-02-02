@@ -1,32 +1,26 @@
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
-import Link from "next/link"
 import ReactMarkdown from "react-markdown"
 
-const RenderRouterLink = ( { href, children }) => {
-    // We use a <Link> for anything not pointing to an external domain
-    // and for URLs not starting with /assets
-    const useRouterLink = !href.match(/^(https?:)?\/\//) &&
-        !href.match(/^\/assets/)
+import Meta from "components/Meta"
+import { RenderRouterLink } from "utils"
 
-    return (useRouterLink
-        ? <Link href={href}><a>{children}</a></Link>
-        : <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
-    )
-}
-
-const MarkdownPage = ({ source, data }) => {
+const MarkdownPage = ({ source, meta }) => {
     return (
-        <section id="page" className="container page">
-            <article>
-                <ReactMarkdown
-                    source={source}
-                    escapeHtml={false}
-                    renderers={ { link: RenderRouterLink } }
-                />
-            </article>
-        </section>
+        <>
+            <Meta title={meta.title} />
+
+            <section id="page" className="container page">
+                <article>
+                    <ReactMarkdown
+                        source={source}
+                        escapeHtml={false}
+                        renderers={ { link: RenderRouterLink } }
+                    />
+                </article>
+            </section>
+        </>
     )
 }
 

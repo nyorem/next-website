@@ -1,3 +1,7 @@
+---
+title: Projects
+---
+
 # Projects
 
 Here you will find a non-exhaustive list of projects I worked on (during my studies or in my free time).

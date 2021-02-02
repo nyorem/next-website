@@ -1,3 +1,7 @@
+---
+title: Research
+---
+
 # Research
 
 ### Research interests

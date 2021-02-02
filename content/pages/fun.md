@@ -1,3 +1,7 @@
+---
+title: Some fun stuff
+---
+
 # Fun
 
 ### Translations of some of NisiOisiN's work
