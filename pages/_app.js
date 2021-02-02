@@ -1,5 +1,5 @@
-import "../styles/globals.css"
-import "../styles/custom.css"
+import "styles/globals.css"
+import "styles/custom.css"
 
 import Layout from "../components/Layout"
 

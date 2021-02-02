@@ -1,3 +1,5 @@
+import fs from "fs"
+import path from "path"
 import matter from "gray-matter"
 import Link from "next/link"
 import ReactMarkdown from "react-markdown"
@@ -43,13 +45,8 @@ export const getStaticProps = async context => {
 }
 
 export const getStaticPaths = () => {
-    // TODO: get all md files in ../../content/pages directory
-    const paths = [
-        { params: { slug: "about" } },
-        { params: { slug: "research" } },
-        { params: { slug: "projects" } },
-        { params: { slug: "fun" } },
-    ]
+    const paths = fs.readdirSync(path.join(process.cwd(), "content/pages"))
+        .map(file => ({ params: { slug: file.slice(0, -3) } }))
 
     return {
         paths,
