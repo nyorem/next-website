@@ -11,3 +11,19 @@ export const RenderRouterLink = ( { href, children }) => {
         : <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
     )
 }
+
+export const renderers = {
+    link:  RenderRouterLink,
+}
+
+export const scrollToTop = () => {
+    window.scrollTo(0, 0)
+}
+
+export const padWithZerosLike = (n, example) => {
+    const N = example.length
+    const ret = String(n)
+    const missing = N - ret.length
+    return "0".repeat(missing) + ret
+}
+

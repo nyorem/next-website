@@ -1,26 +1,22 @@
-import { useEffect } from "react"
 import fs from "fs"
-import path from "path"
 import matter from "gray-matter"
+import path from "path"
 import Link from "next/link"
+import { useRouter } from "next/router"
+import { useEffect } from "react"
 import ReactMarkdown from "react-markdown/with-html"
 import { useSwipeable } from "react-swipeable"
-import { useRouter } from "next/router"
 
-import { RenderRouterLink } from "utils"
+import { padWithZerosLike, renderers, scrollToTop } from "utils"
 import Meta from "components/Meta"
-
-const scrollToTop = () => {
-    window.scrollTo(0, 0)
-}
 
 const Story = ({ meta, source, previous, next }) => {
     const router = useRouter()
     const { lang, slug, chapter } = router.query
 
-    const other = (lang === "en") ? "jp" : "en"
-    const draft =  meta.draft ? "draft" : ""
-    const nextStr = (lang === "en") ? "Next" : "次"
+    const other       = (lang === "en") ? "jp" : "en"
+    const draft       =  meta.draft ? "draft" : ""
+    const nextStr     = (lang === "en") ? "Next" : "次"
     const previousStr = (lang === "en") ? "Previous" : "前"
 
     useEffect(() => {
@@ -38,16 +34,16 @@ const Story = ({ meta, source, previous, next }) => {
         return () => window.removeEventListener("keydown", handleKeyDown)
     }, [router])
 
-    const handlers = useSwipeable({
-        onSwipedLeft() {
-            if (next) {
-                router.push(`/translation/${lang}/${slug}/${next}`)
-                scrollToTop()
-            }
-        },
+    const swipeHandlers = useSwipeable({
         onSwipedRight() {
             if (previous) {
                 router.push(`/translation/${lang}/${slug}/${previous}`)
+                scrollToTop()
+            }
+        },
+        onSwipedLeft() {
+            if (next) {
+                router.push(`/translation/${lang}/${slug}/${next}`)
                 scrollToTop()
             }
         },
@@ -56,7 +52,7 @@ const Story = ({ meta, source, previous, next }) => {
     return (
         <>
             <Meta title={meta.title} />
-            <section id="chapter" className="container page" {...handlers}>
+            <section id="chapter" className="container page" {...swipeHandlers}>
                 <article>
                     <header id="header_novel">
                         <div id="title">
@@ -74,7 +70,7 @@ const Story = ({ meta, source, previous, next }) => {
                     source={source}
                     escapeHtml={false}
                     className={`translation_${lang} ${draft}`}
-                    renderers={ { link: RenderRouterLink } }
+                    renderers={renderers}
                 />
 
                 <center>
@@ -93,16 +89,6 @@ const Story = ({ meta, source, previous, next }) => {
             </section>
         </>
     )
-}
-
-// TODO: move to utils
-const isDirectory = path => fs.existsSync(path) && fs.lstatSync(path).isDirectory()
-
-const padWithZerosLike = (n, example) => {
-    const N = example.length
-    const ret = String(n)
-    const missing = N - ret.length
-    return "0".repeat(missing) + ret
 }
 
 export const getStaticProps = async context => {
@@ -128,6 +114,8 @@ export const getStaticProps = async context => {
 }
 
 export const getStaticPaths = () => {
+    const isDirectory = path => fs.existsSync(path) && fs.lstatSync(path).isDirectory()
+
     const stories = fs.readdirSync(path.join(process.cwd(), "content/translations"))
         .filter(p => isDirectory(path.join(process.cwd(), "content/translations", p)))
 

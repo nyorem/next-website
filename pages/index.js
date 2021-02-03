@@ -1,4 +1,4 @@
-export default function Home() {
+const Home = () => {
     return (
         <>
             <section className="container centered">
@@ -22,3 +22,5 @@ export default function Home() {
         </>
     )
 }
+
+export default Home

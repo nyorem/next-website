@@ -1,17 +1,7 @@
 import Link from "next/link"
 import Meta from "./Meta"
 
-const Footer = () => {
-    return (
-        <footer className="footer">
-            <section className="container">
-                © 2018-2021 · Powered by <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">Next.js</a> with the <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener noreferrer">Coder</a> theme.
-            </section>
-        </footer>
-    )
-}
-
-const Nav = () => {
+const Navbar = () => {
     return (
         <nav className="navigation">
             <section className="container">
@@ -32,6 +22,16 @@ const Nav = () => {
     )
 }
 
+const Footer = () => {
+    return (
+        <footer className="footer">
+            <section className="container">
+                © 2018-2021 · Powered by <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">Next.js</a> with the <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener noreferrer">Coder</a> theme.
+            </section>
+        </footer>
+    )
+}
+
 const Layout = ({ children }) => {
     return (
         <>
@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
 
             <main className="wrapper">
                 <div id="app">
-                    <Nav />
+                    <Navbar />
 
                     <div className="app">
                         {children}

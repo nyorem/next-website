@@ -1,11 +1,11 @@
 import fs from "fs"
-import path from "path"
 import matter from "gray-matter"
+import path from "path"
 import Link from "next/link"
-import ReactMarkdown from "react-markdown/with-html"
 import { useRouter } from "next/router"
+import ReactMarkdown from "react-markdown/with-html"
 
-import { RenderRouterLink } from "utils"
+import { renderers } from "utils"
 import Meta from "components/Meta"
 
 const Translation = ({ source, meta }) => {
@@ -36,7 +36,7 @@ const Translation = ({ source, meta }) => {
                     source={source}
                     escapeHtml={false}
                     className={`translation_${lang} ${draft}`}
-                    renderers={ { link: RenderRouterLink } }
+                    renderers={renderers}
                 />
             </section>
         </>
@@ -52,15 +52,14 @@ export const getStaticProps = async context => {
     return {
         props: {
             source: content,
-            meta: data,
+            meta  : data,
         },
     }
 }
 
-// TODO: move to utils
-const isDirectory = path => fs.existsSync(path) && fs.lstatSync(path).isDirectory()
-
 export const getStaticPaths = () => {
+    const isDirectory = path => fs.existsSync(path) && fs.lstatSync(path).isDirectory()
+
     const paths = fs.readdirSync(path.join(process.cwd(), "content/translations"))
         .filter(p => ! isDirectory(path.join(process.cwd(), "content/translations", p)))
         .map(file => {

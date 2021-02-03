@@ -1,10 +1,10 @@
 import fs from "fs"
-import path from "path"
 import matter from "gray-matter"
+import path from "path"
 import ReactMarkdown from "react-markdown"
 
 import Meta from "components/Meta"
-import { RenderRouterLink } from "utils"
+import { renderers } from "utils"
 
 const MarkdownPage = ({ source, meta }) => {
     return (
@@ -16,7 +16,7 @@ const MarkdownPage = ({ source, meta }) => {
                     <ReactMarkdown
                         source={source}
                         escapeHtml={false}
-                        renderers={ { link: RenderRouterLink } }
+                        renderers={renderers}
                     />
                 </article>
             </section>
