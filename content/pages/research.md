@@ -47,12 +47,3 @@ We prove the convergence of a damped Newton's method to solve the optimal transp
 - Manuscript: [hal](https://hal.archives-ouvertes.fr/tel-02135220)
 - Defended on 16th October 2018
 
-### Contact
-
-- **Email**: Firstname.Lastname[at]insa-lyon.fr
-- Office address:
-
-LIRIS, Bâtiment Nautibus  
-43 Boulevard du 11 novembre 1918  
-69622 Villeurbanne
-
