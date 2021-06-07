@@ -15,7 +15,7 @@ I then obtained my PhD in applied mathematics in 2018 at the [Jean Kuntzmann Lab
     <figcaption>Example of lens design for a collimated light source and a RGB target image (the banner of the SIGGRAPH Asia 2018 conference).</figcaption>
 </figure>
 
-I am now a postdoctoral researcher at the [LIRIS](http://liris.cnrs.fr/en) laboratory under the supervision of [Tristan Roussillon](https://perso.liris.cnrs.fr/tristan.roussillon/). I am working on improving plane-probing algorithms for estimating normal vectors on digital planes and digital surfaces.
+I was also a postdoctoral researcher at the [LIRIS](http://liris.cnrs.fr/en) laboratory under the supervision of [Tristan Roussillon](https://perso.liris.cnrs.fr/tristan.roussillon/). I worked on improving plane-probing algorithms for estimating normal vectors on digital planes and digital surfaces.
 
 <figure>
     <img src="/assets/images/torus_normals.png"
@@ -28,6 +28,8 @@ I am now a postdoctoral researcher at the [LIRIS](http://liris.cnrs.fr/en) labor
          style="vertical-align: middle;" />
 <figcaption><strong>Left:</strong> estimated normals using a plane-probing algorithm on a digitization of a torus. <strong>Right:</strong> estimated normals on a digital surface.</figcaption>
 </figure>
+
+I am now an IT consultant at [Adentis](https://www.adentis.fr/) and am working with different companies around Grenoble in France.
 
 Some of the programs I have developed can be found on my [GitHub](https://github.com/nyorem) page and my resume can be found in [English](/assets/cv_en.pdf) or in [French](/assets/cv_fr.pdf).
 
