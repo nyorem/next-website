@@ -10,7 +10,7 @@ title: Some fun stuff
     <img src="/assets/images/nisioisin-logo.png" alt="NisiOisiN">
 </center>
 
-Note that I am still learning Japanese (N3 level) and I am not a native English speaker, so there might be mistakes in the translations.
+Note that I am still learning Japanese (N2 level) and I am not a native English speaker, so there might be mistakes in the translations.
 
 - **Monogatari Series (物語シリーズ)**
     - Short stories (短々篇)

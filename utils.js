@@ -13,7 +13,7 @@ export const RenderRouterLink = ( { href, children }) => {
 }
 
 export const renderers = {
-    link:  RenderRouterLink,
+    a:  RenderRouterLink,
 }
 
 export const scrollToTop = () => {
