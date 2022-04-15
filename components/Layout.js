@@ -12,9 +12,9 @@ const Navbar = () => {
                     <ul className="navigation-list">
                         {/* <li className="navigation-item align-left"><Link className="navigation-link" href="/posts">Posts</Link></li> */}
                         <li className="navigation-item align-left"><Link className="navigation-link" href="/page/about">About Me</Link></li>
-                        <li className="navigation-item align-left"><Link className="navigation-link" href="/page/research">Research</Link></li>
                         <li className="navigation-item align-left"><Link className="navigation-link" href="/page/projects">Projects</Link></li>
                         <li className="navigation-item align-left"><Link className="navigation-link" href="/page/fun">Fun</Link></li>
+                        <li className="navigation-item align-left"><Link className="navigation-link" href="/page/research">Research</Link></li>
                     </ul>
                 </label>
             </section>
@@ -26,7 +26,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <section className="container">
-                © 2018-2021 · Powered by <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">Next.js</a> with the <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener noreferrer">Coder</a> theme.
+                © 2018-2022 · Powered by <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">Next.js</a> with the <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener noreferrer">Coder</a> theme.
             </section>
         </footer>
     )

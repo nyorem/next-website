@@ -6,7 +6,7 @@ title: About Me
 
 I graduated from the [Ensimag](http://ensimag.grenoble-inp.fr/welcome/) (engineering school in applied mathematics and computer science) in 2015.
 
-I then obtained my PhD in applied mathematics in 2018 at the [Jean Kuntzmann Laboratory](https://ljk.imag.fr/index_en.php) in Grenoble, France. I was under the supervision of [Dominique Attali](https://www.gipsa-lab.grenoble-inp.fr/~dominique.attali/), [Quentin Mérigot](http://quentin.mrgt.fr/) and [Boris Thibert](https://www-ljk.imag.fr/membres/Boris.Thibert/) and worked on solving inverse problems arising in optics using methods based on semi-discrete optimal transport and tools from computational geometry (such as Laguerre and Power diagrams). The figure below illustrates one of the problems I worked on.
+I then obtained my PhD in applied mathematics in 2018 at the [Jean Kuntzmann Laboratory](https://ljk.imag.fr/index_en.php) in Grenoble, France. I was under the supervision of [Dominique Attali](https://www.gipsa-lab.grenoble-inp.fr/~dominique.attali/), [Quentin Mérigot](http://quentin.mrgt.fr/) and [Boris Thibert](https://www-ljk.imag.fr/membres/Boris.Thibert/) and worked on solving inverse problems arising in optics using methods based on semi-discrete optimal transport and tools from computational geometry (such as Laguerre and Power diagrams). The manuscript can be found [here](https://hal.archives-ouvertes.fr/tel-02135220). The figure below illustrates one of the problems I worked on.
 
 <figure>
     <img src="/assets/images/sa2018_banner_smoke_12h_smaller.png"
@@ -29,7 +29,7 @@ I was also a postdoctoral researcher at the [LIRIS](http://liris.cnrs.fr/en) lab
 <figcaption><strong>Left:</strong> estimated normals using a plane-probing algorithm on a digitization of a torus. <strong>Right:</strong> estimated normals on a digital surface.</figcaption>
 </figure>
 
-I am now an IT consultant at [Adentis](https://www.adentis.fr/) and am working with different companies around Grenoble in France.
+I am now an IT consultant at [Adentis](https://www.adentis.fr/) and am working with different companies around Grenoble and Lyon in France.
 
 Some of the programs I have developed can be found on my [GitHub](https://github.com/nyorem) page and my resume can be found in [English](/assets/cv_en.pdf) or in [French](/assets/cv_fr.pdf).
 
