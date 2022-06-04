@@ -14,9 +14,9 @@ const MarkdownPage = ({ source, meta }) => {
             <section id="page" className="container page">
                 <article>
                     <ReactMarkdown
-                        children={source}
+                        source={source}
                         escapeHtml={false}
-                        components={renderers}
+                        renderers={renderers}
                     />
                 </article>
             </section>
