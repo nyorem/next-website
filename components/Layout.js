@@ -15,6 +15,7 @@ const Navbar = () => {
                         <li className="navigation-item align-left"><Link className="navigation-link" href="/page/projects">Projects</Link></li>
                         <li className="navigation-item align-left"><Link className="navigation-link" href="/page/fun">Fun</Link></li>
                         <li className="navigation-item align-left"><Link className="navigation-link" href="/page/research">Research</Link></li>
+                        <li className="navigation-item align-left"><Link className="navigation-link" href="/blog">Blog</Link></li>
                     </ul>
                 </label>
             </section>
