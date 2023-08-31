@@ -2,6 +2,7 @@ import fs from "fs"
 import matter from "gray-matter"
 import path from "path"
 import ReactMarkdown from "react-markdown"
+import rehypeRaw from 'rehype-raw'
 
 import Meta from "components/Meta"
 import { renderers } from "utils"
@@ -14,9 +15,9 @@ const MarkdownPage = ({ source, meta }) => {
             <section id="page" className="container page">
                 <article>
                     <ReactMarkdown
-                        source={source}
-                        escapeHtml={false}
-                        renderers={renderers}
+                        rehypePlugins={[rehypeRaw]}
+                        children={source}
+                        components={renderers}
                     />
                 </article>
             </section>
