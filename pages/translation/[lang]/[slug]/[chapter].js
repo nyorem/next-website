@@ -60,7 +60,7 @@ const Story = ({ meta, source, previous, next }) => {
                         </div>
                         <div id="lang">
                             <Link href={`/translation/${other}/${slug}/${chapter}`} >
-                                <a><img src={`/assets/images/${other}.png`} alt={other} /></a>
+                                <img src={`/assets/images/${other}.png`} alt={other} />
                             </Link>
                         </div>
                     </header>
@@ -76,13 +76,13 @@ const Story = ({ meta, source, previous, next }) => {
                 <center>
                     {previous &&
                     <Link href={`/translation/${lang}/${slug}/${previous}`} onClick={scrollToTop} >
-                        <a>{previousStr}</a>
+                        {previousStr}
                     </Link>
                     }
 
                     {next &&
                     <Link href={`/translation/${lang}/${slug}/${next}`} onClick={scrollToTop} >
-                        <a>{nextStr}</a>
+                        {nextStr}
                     </Link>
                     }
                 </center>

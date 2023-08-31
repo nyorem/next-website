@@ -2,7 +2,7 @@
 
 set -e
 rm -rf out
-yarn build && yarn export
+yarn build
 cd out
 
 # see: https://github.com/vercel/next.js/issues/3335#issuecomment-348747078

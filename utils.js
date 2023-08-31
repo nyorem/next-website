@@ -7,7 +7,7 @@ export const RenderRouterLink = ( { href, children }) => {
         !href.match(/^\/assets/)
 
     return (useRouterLink
-        ? <Link href={href}><a>{children}</a></Link>
+        ? <Link href={href}>{children}</Link>
         : <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
     )
 }

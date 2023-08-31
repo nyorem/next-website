@@ -26,7 +26,7 @@ const Translation = ({ source, meta }) => {
                         </div>
                         <div id="lang">
                             <Link href={`/translation/${other}/${slug}`} >
-                                <a><img src={`/assets/images/${other}.png`} alt={other} /></a>
+                                <img src={`/assets/images/${other}.png`} alt={other} />
                             </Link>
                         </div>
                     </header>
