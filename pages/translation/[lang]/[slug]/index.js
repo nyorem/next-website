@@ -3,7 +3,8 @@ import matter from "gray-matter"
 import path from "path"
 import Link from "next/link"
 import { useRouter } from "next/router"
-import ReactMarkdown from "react-markdown/with-html"
+import ReactMarkdown from "react-markdown"
+import rehypeRaw from 'rehype-raw'
 
 import { renderers } from "utils"
 import Meta from "components/Meta"
@@ -26,17 +27,17 @@ const Translation = ({ source, meta }) => {
                         </div>
                         <div id="lang">
                             <Link href={`/translation/${other}/${slug}`} >
-                                <a><img src={`/assets/images/${other}.png`} alt={other} /></a>
+                                <img src={`/assets/images/${other}.png`} alt={other} />
                             </Link>
                         </div>
                     </header>
                 </article>
 
                 <ReactMarkdown
-                    source={source}
-                    escapeHtml={false}
+                    rehypePlugins={[rehypeRaw]}
+                    children={source}
                     className={`translation_${lang} ${draft}`}
-                    renderers={renderers}
+                    components={renderers}
                 />
             </section>
         </>

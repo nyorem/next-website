@@ -1,19 +1,27 @@
 import Link from "next/link"
 
-export const RenderRouterLink = ( { href, children }) => {
+export const RenderRouterLink = ( { href, children, title }) => {
     // We use a <Link> for anything not pointing to an external domain
     // and for URLs not starting with /assets
     const useRouterLink = !href.match(/^(https?:)?\/\//) &&
         !href.match(/^\/assets/)
 
-    return (useRouterLink
-        ? <Link href={href}><a>{children}</a></Link>
-        : <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
-    )
+    const isAnnotation = title !== undefined
+
+    if (isAnnotation)
+    {
+        return <a href={href} title={title}>{children}</a>
+    }
+    else if (useRouterLink)
+    {
+        return <Link href={href}>{children}</Link>
+    }
+
+    return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
 }
 
 export const renderers = {
-    link:  RenderRouterLink,
+    a:  RenderRouterLink,
 }
 
 export const scrollToTop = () => {

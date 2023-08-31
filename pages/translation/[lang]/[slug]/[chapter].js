@@ -4,7 +4,8 @@ import path from "path"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import { useEffect } from "react"
-import ReactMarkdown from "react-markdown/with-html"
+import ReactMarkdown from "react-markdown"
+import rehypeRaw from 'rehype-raw'
 import { useSwipeable } from "react-swipeable"
 
 import { padWithZerosLike, renderers, scrollToTop } from "utils"
@@ -60,29 +61,29 @@ const Story = ({ meta, source, previous, next }) => {
                         </div>
                         <div id="lang">
                             <Link href={`/translation/${other}/${slug}/${chapter}`} >
-                                <a><img src={`/assets/images/${other}.png`} alt={other} /></a>
+                                <img src={`/assets/images/${other}.png`} alt={other} />
                             </Link>
                         </div>
                     </header>
                 </article>
 
                 <ReactMarkdown
-                    source={source}
-                    escapeHtml={false}
+                    rehypePlugins={[rehypeRaw]}
+                    children={source}
                     className={`translation_${lang} ${draft}`}
-                    renderers={renderers}
+                    components={renderers}
                 />
 
                 <center>
                     {previous &&
                     <Link href={`/translation/${lang}/${slug}/${previous}`} onClick={scrollToTop} >
-                        <a>{previousStr}</a>
+                        {previousStr}
                     </Link>
                     }
 
                     {next &&
                     <Link href={`/translation/${lang}/${slug}/${next}`} onClick={scrollToTop} >
-                        <a>{nextStr}</a>
+                        {nextStr}
                     </Link>
                     }
                 </center>
