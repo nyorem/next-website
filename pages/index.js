@@ -8,7 +8,7 @@ const Home = () => {
                     </div>
 
                     <h1>Jocelyn Meyron</h1>
-                    <h1>IT consultant at <a href="https://www.adentis.fr/" target="_blank" rel="noopener noreferrer">Adentis</a></h1>
+                    <h1>Embedded Linux Software engineer at <a href="https://www.eaton.com/us/en-us.html" target="_blank" rel="noopener noreferrer">Eaton</a></h1>
                     <h2>Postdoctoral researcher in computer science</h2>
                     <h2>Engineer in computer science</h2>
                     <h2>PhD in applied mathematics</h2>

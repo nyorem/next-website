@@ -29,7 +29,7 @@ I was also a postdoctoral researcher at the [LIRIS](http://liris.cnrs.fr/en) lab
 <figcaption><strong>Left:</strong> estimated normals using a plane-probing algorithm on a digitization of a torus. <strong>Right:</strong> estimated normals on a digital surface.</figcaption>
 </figure>
 
-I am now an IT consultant at [Adentis](https://www.adentis.fr/) and am working with different companies around Grenoble and Lyon in France.
+I was an IT consultant at [Adentis](https://www.adentis.fr/) until September 2023 when I joined [Eaton](https://www.eaton.com/us/en-us.html) as an embedded Linux software engineer.
 
 Some of the programs I have developed can be found on my [GitHub](https://github.com/nyorem) page and my resume can be found in [English](/assets/cv_en.pdf) or in [French](/assets/cv_fr.pdf).
 
