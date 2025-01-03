@@ -26,7 +26,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <section className="container">
-                © 2018-2023 · Powered by <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">Next.js</a> with the <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener noreferrer">Coder</a> theme.
+                © 2018-2025 · Powered by <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">Next.js</a> with the <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener noreferrer">Coder</a> theme.
             </section>
         </footer>
     )
